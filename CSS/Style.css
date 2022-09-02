@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --red: #f37878;
+  --green: #D9f8c4;
+  --blue: #CDF0EA;
+  --grey: #e4e3e1;
+  --color1: black;
+  --color2: white;
+  --trans: all .2s;
+  --textshadow1: 10px 10px 30px rgb(70, 70, 70);
+  --textshadow: -1px -1px 10px rgb(70, 70, 70);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+section:hover .heading {
+  text-shadow: var(--textshadow);
+  transition: var(--trans);
+}
+section .heading {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 2rem;
+  text-shadow: var(--textshadow1);
+}
+
+header {
+  width: 100vw;
+  background-color: var(--red);
+  color: var(--color2);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  overflow: hidden !important;
+}
+header nav {
+  width: 90%;
+  margin: auto;
+  justify-content: space-between !important;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
+header nav i {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--green);
+  text-shadow: var(--textshadow1);
+}
+header nav li {
+  margin-left: 1.2rem;
+  list-style: none;
+}
+header nav li:hover {
+  transform: translateY(-5px);
+  transition: var(--trans);
+}
+header nav li a {
+  text-decoration: none;
+  text-shadow: var(--textshadow);
+  color: var(--color2);
+}
+header nav li a:hover {
+  font-weight: bold;
+  color: var(--grey);
+  transition: var(--trans);
+}
+
+#about {
+  margin-top: 6rem;
+  width: 100%;
+  min-height: 80vh;
+  background-color: var(--blue);
+  position: relative;
+}
+#about .heading {
+  color: var(--blue);
+}
+#about i {
+  position: absolute;
+  bottom: 0%;
+  right: -5rem;
+  font-size: 40rem;
+  text-shadow: var(--textshadow1);
+  filter: opacity(0.05);
+}
+#about p {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  font-size: 1.5rem;
+  color: var(--color1);
+  z-index: 2;
+}
+
+#products {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--green);
+}
+#products .heading {
+  color: var(--green);
+}
+#products .row {
+  width: 90%;
+  margin-top: 3rem;
+  justify-content: space-between;
+}
+#products .row .col {
+  width: 30%;
+}
+#products .row .col iframe,
+#products .row .col img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 1rem;
+  box-shadow: var(--textshadow);
+  cursor: pointer;
+}
+#products .row .col iframe:hover,
+#products .row .col img:hover {
+  box-shadow: var(--textshadow1);
+  transition: var(--trans);
+  transform: translateY(-10px);
+}
+
+#services {
+  width: 100%;
+  min-height: 80vh;
+  background-color: var(--grey);
+  justify-content: space-around;
+}
+#services .heading {
+  color: var(--grey);
+}
+#services .row {
+  width: 45%;
+  margin-top: 3rem;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 3rem;
+}
+#services .row:hover h2 {
+  text-shadow: var(--textshadow);
+  transition: var(--trans);
+}
+#services .row h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 2rem;
+  color: var(--grey);
+  text-shadow: var(--textshadow1);
+  transform: translateX(-50%);
+}
+#services .row div {
+  width: 40%;
+  padding: 1rem;
+  min-height: 15rem;
+  border-radius: 1rem;
+  background-color: rgb(104, 102, 102);
+  color: var(--color2);
+  box-shadow: var(--textshadow);
+}
+#services .row div:hover {
+  box-shadow: var(--textshadow1);
+  transition: var(--trans);
+  transform: translateY(-10px);
+  background-color: var(--color1);
+}
+
+#contact {
+  width: 100%;
+  min-height: 60vh;
+  background-color: var(--blue);
+  justify-content: space-around;
+}
+#contact .heading {
+  color: var(--blue);
+}
+#contact .row {
+  width: 45%;
+  margin-top: 3rem;
+  position: relative;
+  padding-top: 3rem;
+}
+#contact .row h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 2.5rem;
+  color: var(--color1);
+  text-shadow: var(--textshadow1);
+  transform: translateX(-50%);
+}
+#contact .row p {
+  width: 90%;
+  font-size: 2rem;
+  margin: 1rem auto;
+}
+#contact .row p span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  text-shadow: var(--textshadow1);
+}
+#contact .row p i {
+  color: var(--red);
+}
+#contact .row p .fa-whatsapp {
+  color: blue;
+  cursor: pointer;
+}
+
+footer {
+  min-height: 8vh;
+  font-size: 1.5rem;
+  color: blue;
+}
